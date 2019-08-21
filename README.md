@@ -1,2 +1,2 @@
 # PayingGuest
-A social site for travellers to share their rooms with others...
+A social site for travellers to share their rooms with other
