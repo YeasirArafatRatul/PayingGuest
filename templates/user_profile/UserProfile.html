@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<head>
+	<title>Profile</title>
+</head>
+<body>
+	<div class="container" align="center">
+		<div class="media">
+			<img class="rounded-circle user_profile-img" src="{{ user.userprofile.image.url }}" width="125" height="125">
+			<div class="media-body">
+				<p>{{ user.full_name }}</p>
+				<p>{{ user.email }}</p>
+				
+		<div>
+			<a class="ml-2" href="{% url 'new-post' %}">New Post</a>
+		</div>
+		<div>
+			<a class="ml-2" href="{% url 'update_profile' %}">Update Profile</a>
+		</div>
+		<br>
+	</div>
+			<div class="border-top pt-4">
+				
+			</div>
+</body>
+{% endblock %}
+ 

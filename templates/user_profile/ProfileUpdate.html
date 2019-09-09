@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!-- FORM  -->
+	<div class = "container" align="center">
+		<div class="col-sm-3">
+			<form method='POST' enctype="multipart/form-data">
+				{% csrf_token %}
+				{% if user.is_authenticated %}
+				<fieldset class="form-group">
+				<legend class="border-bottom mb-3">Update Profile</legend>
+				{{ update_form|crispy }}
+				{{ image_form|crispy }}<!-- {{ form.as_p }}   -->  
+			</fieldset> 
+			 {% else %}
+			 <legend class="border-bottom mb-3">Profile</legend>
+
+
+			{% endif %}
+			<div class="form-group">
+				<button class ="btn btn-outline-info" type="submit">Update</button>
+			</div>
+		 </form>
+		</div>
+	</div>
+
+{% endblock %}
+ 
+ 	<!-- <a class="ml-2" href="{% url 'profile' %}">Update</a> -->
