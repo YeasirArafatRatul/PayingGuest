@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-AUTH_USER_MODEL = 'forms.User' #changes the built_in userModel to Custom user model
+# changes the built_in userModel to Custom user model
+AUTH_USER_MODEL = 'forms.User'
 
 
 # Application definition
@@ -40,8 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
+    'rest_framework',
 
-    #other_apps
+    # other_apps
     'forms',
     'user_profile',
     'blog',
@@ -127,21 +129,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = '/static/'
-MEDIA_URL ='/media/'
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),"static","media")
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "media")
 # MEDIA_ROOT = 'C:/users/asus-pc/desktop/django/newVenv/static/media'
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"static","static_root")
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "static_root")
 
-STATICFILES_DIRS =( 
-    os.path.join(os.path.dirname(BASE_DIR),"static","static_files"),
+STATICFILES_DIRS = (
+    os.path.join(os.path.dirname(BASE_DIR), "static", "static_files"),
 )
 
-TEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(BASE_DIR), 'templates'),
-)
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
- 
+
 LOGIN_REDIRECT_URL = '/profile/'
 
 # LOGOUT_REDIRECT_URL ='/blog/rooms/'

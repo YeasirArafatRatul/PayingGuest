@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Post
 from django.views.generic import (
-    ListView, DetailView, CreateView, UpdateView, DeleteView )
+    ListView, DetailView, CreateView, UpdateView, DeleteView)
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .forms import PostForm
 
@@ -33,7 +33,6 @@ class PostCreateView(LoginRequiredMixin, CreateView):
         request = self.request
         form.instance.owner = self.request.user
         form.save()
-
         return super().form_valid(form)
 
 
