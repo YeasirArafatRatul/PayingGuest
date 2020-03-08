@@ -21,6 +21,8 @@ urlpatterns = [
 
     # apis
     path('blog-api/', include('blog.api.urls')),
+    path('account-api/', include('forms.api.urls')),
+
 
 
 ]
