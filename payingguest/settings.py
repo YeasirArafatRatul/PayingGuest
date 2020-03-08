@@ -138,6 +138,9 @@ STATICFILES_DIRS = (
     os.path.join(os.path.dirname(BASE_DIR), "static", "static_files"),
 )
 
+TEMPLATE_DIRS = (
+    os.path.join(os.path.dirname(BASE_DIR), 'templates'),
+)
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
