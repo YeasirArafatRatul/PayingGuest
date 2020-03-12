@@ -77,8 +77,8 @@ class User(AbstractBaseUser):  #CustomUserClass
     def __str__(self):
         return self.email
         
-    def __str__(self):
-        return self.full_name
+    #def __str__(self):
+        #return self.full_name
 
     # def __str__(self):
     #     return str(self.phone)
